@@ -1,13 +1,12 @@
 const btn = document.querySelector("button");
 var inputFields = document.querySelectorAll("input");
-var inputError = document.querySelectorAll(".error-message");
-var firstName = document.querySelector("#fname");
-var lastName = document.querySelector("#lname");
+var inputError = document.querySelectorAll(".error-text");
+var firstName = document.querySelector("#first-name");
+var lastName = document.querySelector("#last-name");
 var email = document.querySelector("#email");
 var password = document.querySelector("#password");
 
 btn.addEventListener("click", (e) => {
-  e.preventDefault();
   if (
     firstName.value === "" &&
     lastName.value === "" &&
