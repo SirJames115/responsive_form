@@ -1,110 +1,91 @@
-* {
-    padding: 0px;
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    background-size: cover;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
+body{
+    background: url(./images/bg-intro-desktop.png), rgba(255, 121, 120, 1);
+    font-family: Poppins, sans-serif;
     font-weight: 700;
-    background-image: url("/images/desktop.png");
-    background-color: #FE7A78;
-    background-size: cover;
 }
 
-main {
+main{
+    width: 80%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-container{
     width: 100%;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: auto;
-    margin-top: 7vh;
-}
-
-.top {
-    background-color: #5D54A3;
-    height: 60px;
-    width: 100%;
-    color: #FFF;
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    border-radius: 5px;
-    border: 0px;
-    margin: 0px 0px 0px 0px;
 }
 
-.top,
-form {
-    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.219);
+.left, .right{
+    width: 50%;
+    padding: 24px;
 }
 
-.left-hand {
-    width: 500px;
-    margin-left: 30px;
-    margin-right: 20vh;
+.left{
+    color: white;
 }
 
-.left-hand h1 {
-    color: #fff;
+.left h1{
     font-size: 50px;
-    line-height: 9vh;
-    margin-bottom: 6vh;
+    font-weight: 700;
 }
-.left-hand p, .left-hand h1{
-    margin-left: 9vh;
-    margin-right: -5vh;
+
+.left p{
+    color: rgba(255,255,255,0.8);
 }
-.right-hand{
-    margin-right: 14vh;
-}
-.left-hand p {
-    color: #fff;
-    font-size: 18px;
-}
-.text-wrapper{
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
+.right .header{
     width: 100%;
-}
-
-.right-hand div {
-    margin-top: 5vh;
-}
-
-form {
-    margin-top: 5vh;
-    width: 500px;
-    height: fit-content;
-    padding: 15px;
-    background-color: #FFF;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-form input:active {
-    border: 1px solid red;
-}
-
-input:active {
-    border: 1px solid red;
-}
-
-input {
-    border-radius: 5px;
-    border: 1px solid gray;
-    height: 50px;
-    padding-left: 20px;
-    margin-bottom: 0px;
-    margin: auto;
     display: flex;
     justify-content: center;
-    width: 94%;
+    align-items: center;
+    background-color: rgb(93, 84, 163);
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 3px 0px rgb(218, 101, 102);
+    margin-bottom: 15px;
 }
 
-.error-message {
+span{
+    color: white;
+    font-weight: bold;
+}
+
+form{
+    background-color: white;
+    padding: 30px;
+    border-radius: 9px;
+}
+.right .header,
+form {
+  box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.24);
+}
+input{
+    display: block;
+    clear: both;
+    height: 50px;
+    border-radius: 7px;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: 1px solid rgb(96, 91, 120, 1);
+}
+
+.error-text{
     display: none;
     float: right;
     margin-top: -18px;
@@ -112,384 +93,115 @@ input {
     color: rgb(255, 121, 120);
 }
 
-.light {
-    font-weight: lighter;
-}
-
-span {
-    display: inline;
-    float: right;
-    margin-top: -13px;
-    margin-bottom: 13px;
-    margin-right: 8px;
-    color: red;
-    font-size: 15px;
-}
-
-button {
-    background-color: #39CC88;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    border-bottom: 3px #1f4131;
-    border: 0px;
-    height: 60px;
+button{
     width: 100%;
+    height: 45px;
+    background-color: rgb(55, 204, 138);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.24);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(55, 204, 138);
+    font-size: 15px;
+    margin-bottom: 6px;
     transition: 0.5s;
 }
 
-button {
-    box-shadow: 0px 5px 0px 0px rgba(0, 146, 114, 0.803);
-}
-
-button:hover {
-    background-color: #77E2B4;
-    transition: 0.5s;
+button:hover{
     cursor: pointer;
+    background-color: #77e2b4;
+    transition: 0.5s;
 }
-
-.smallp {
+form p{
+    font-size: 11px;
     text-align: center;
-    margin-top: 10px;
-    color: gray;
+    color: rgba(200, 198, 211,1);
 }
 
-.red {
-    color: red;
+.terms{
+    color: rgba(255, 121, 120, 1);
 }
-
-a {
+a{
     text-decoration: none;
 }
 
-@media only screen and (max-width: 375px) {
-    body {
-        background-size: cover;
-        font-size: 15px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        background-image: url("/images/mobile.png");
-        background-color: #FE7A78;
-        background-size: cover;
-    }
-
-    main {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: space-around;
-        margin: auto;
-        margin-top: 7vh;
-        padding-left: 5vh;
-    }
-
-    .left-hand,
-    .right-hand {
-    }
-
-    p {
-         width: 80%;
-         font-size: xx-small;
-    }
-
-    form {
-        margin-right: 6px;
-        margin-left: 30px;
-         height: fit-content;
-         width: 346px;
-    }
-    .text-wrapper{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        margin-left: 13%;
-        width: 70%;
-    }
-
-    .top {
-        margin-left: 7.5%;
-        width: 375px;
-    }
-    button {
-        background-color: #39CC88;
-        color: #FFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        border-bottom: 3px #1f4131;
-        border: 0px;
-        height: 50px;
-        width: 100%;
-        transition: 0.5s;
-    }
-    .right-hand{
-        display: block;
-        margin-left: 45px;
-        margin-bottom: 60px;
-    }
-    .formation{
-        display: flex;
-        flex-direction: column;
-        width: 390px;
-    }
-    .formation form{
-        width: 72%;
-        margin-left: 17%;
-    }
-    .formation > .top{
+@media only screen and (max-width: 900px) {
+    body{
+        background: url(./images/bg-intro-mobile.png), rgba(255, 121, 120, 1);
+        font-weight: 600;
+    }    
+    main{
         width: 80%;
-        margin-left: 17%;
-    }
-    .text-wrapper > h1{
-        width: 70%;
+        max-width: 410px;
         margin-left: auto;
+        margin-right: auto;
     }
-    .text-wrapper > .first-p{
-        width: 70%;
-        margin-left: 10%;
-    }
-    .top{
-        width: 70%;
-    }
-}
-@media only screen and (max-width: 1440px){
-    body {
-        background-size: cover;
-        font-size: 15px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        background-image: url("/images/desktop.png");
-        background-color: #FE7A78;
-        background-size: cover;
-    }
-    
-    main {
+    .flex-container{
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        margin-top: 7vh;
+        flex-direction: column;
+    }   
+    .left{
+        margin-top: 100px;
     }
-    
-    .top {
-        background-color: #5D54A3;
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    h1{
+        margin: 50px 0px 30px 0px;
+    }
+    .left, .right{
+        width: 100%;
+        padding: 24px;
+    }
+    .left h1{
+        font-size: 30px;
+    }
+    .right .header{
         height: 60px;
+    }        
+}
+@media only screen and (max-width: 375px){
+body{
+        background: url(./images/bg-intro-mobile.png), rgba(255, 121, 120, 1);
+        font-weight: 400;
+    }    
+    main{
+        width: 80%;
+        max-width: 410px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flex-container{
         width: 100%;
-        color: #FFF;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        border-radius: 5px;
-        border: 0px;
-        margin: 0px 0px 0px 0px;
+        flex-direction: column;
+    }   
+    .left{
+        margin-top: 40px;
     }
-    
-    .top,
-    form {
-        box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.219);
-    }
-    
-    .left-hand {
-        width: 500px;
-        margin-left: 30px;
-        margin-right: 20vh;
-    }
-    
-    .left-hand h1 {
-        color: #fff;
-        font-size: 50px;
-        line-height: 9vh;
-        margin-bottom: 6vh;
-    }
-    .left-hand p, .left-hand h1{
-        margin-left: 9vh;
-        margin-right: -5vh;
-    }
-    .right-hand{
-        margin-right: 14vh;
-    }
-    .left-hand p {
-        color: #fff;
-        font-size: 18px;
-    }
-    .text-wrapper{
+    .center{
         display: flex;
         flex-direction: column;
-        margin-left: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+    h1{
+        margin: 50px 0px 30px 0px;
+    }
+    .left, .right{
         width: 100%;
+        padding: 24px;
     }
-    
-    .right-hand div {
-        margin-top: 5vh;
+    .left h1{
+        font-size: 30px;
     }
-    
-    form {
-        margin-top: 5vh;
-        width: 500px;
-        height: fit-content;
-        padding: 15px;
-        background-color: #FFF;
-        border: 1px solid black;
-        border-radius: 5px;
-    }
-    
-    form input:active {
-        border: 1px solid red;
-    }
-    
-    input:active {
-        border: 1px solid red;
-    }
-    
-    input {
-        border-radius: 5px;
-        border: 1px solid gray;
-        height: 50px;
-        padding-left: 20px;
-        margin-bottom: 0px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        width: 94%;
-    }
-    
-    .error-message {
-        display: none;
-        float: right;
-        margin-top: -18px;
-        margin-bottom: 18px;
-        color: rgb(255, 121, 120);
-    }
-    
-    .light {
-        font-weight: lighter;
-    }
-    
-    span {
-        display: inline;
-        float: right;
-        margin-top: -13px;
-        margin-bottom: 13px;
-        margin-right: 8px;
-        color: red;
-        font-size: 15px;
-    }
-    
-    button {
-        background-color: #39CC88;
-        color: #FFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        border-bottom: 3px #1f4131;
-        border: 0px;
+    .right .header{
         height: 60px;
-        width: 100%;
-        transition: 0.5s;
-    }
-    
-    button {
-        box-shadow: 0px 5px 0px 0px rgba(0, 146, 114, 0.803);
-    }
-    
-    button:hover {
-        background-color: #77E2B4;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-    
-    .smallp {
-        text-align: center;
-        margin-top: 10px;
-        color: gray;
-    }
-    
-    .red {
-        color: red;
-    }
-    
-    a {
-        text-decoration: none;
-    }
+    }        
 }
-
-@media only screen and (max-width: 250px) {
-    body {
-        background-size: cover;
-        font-size: 15px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        background-image: url("/images/mobile.png");
-        background-color: #FE7A78;
-        background-size: cover;
-    }
-
-    main {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: space-around;
-        margin: auto;
-        margin-top: 7vh;
-        padding-left: 5vh;
-    }
-
-    .left-hand,
-    .right-hand {
-    }
-
-    p {
-         width: 80%;
-         font-size: xx-small;
-    }
-
-    form {
-        margin-right: 6px;
-        margin-left: 30px;
-         height: fit-content;
-         width: 346px;
-    }
-    .text-wrapper{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        margin-left: 13%;
-        width: 100%;
-        width: 365px;
-    }
-
-    .top {
-        margin-left: 7.5%;
-        width: 375px;
-    }
-    button {
-        background-color: #39CC88;
-        color: #FFF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        border-bottom: 3px #1f4131;
-        border: 0px;
-        height: 50px;
-        width: 100%;
-        transition: 0.5s;
-    }
-    .right-hand{
-        display: block;
-        margin-left: 45px;
-        margin-bottom: 60px;
-    }
-}
-
